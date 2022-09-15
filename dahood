@@ -1,0 +1,43 @@
+--- gui start
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Script Sell da hood ", "DarkTheme")
+
+--Gui
+local Main = Window:NewTab("Scripts gui")
+local MainSection = Main:NewSection("Gui")
+
+MainSection:NewButton("Script Crostide", "This Gui Crostide script created by .gg/cdhc!", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Crostide/cdhc/main/gui"))()
+end)
+
+MainSection:NewButton("Script iku gui", "This Gui iku script created on server .gg/iku!", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/W9K/roblox-scripts/main/DHC/SimpleSeller.lua', true))()
+end)
+
+MainSection:NewButton("Script halloween gui", "This Gui halloweens script created on server .gg/halloweens! + its script is can to save cpu!", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/halloweevn/SpookyControl/main/Source%20%3AD/GUI'))()
+end)
+
+MainSection:NewButton("Script swag mode gui", "This Gui is swag mode :0", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/lerkermer/lua-projects/master/SwagModeV002'))()
+end)
+
+MainSection:NewButton("Save cpu", "it save cpu if only you on app something! by: Rakung#0002", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/lerkermer/lua-projects/master/SwagModeV002'))()
+end)
+
+--cash
+local Player = Window:NewTab("Cash")
+local PlayerSection = Player:NewSection("Show cash da hood!")
+
+PlayerSection:NewButton("Crostide's Cash Counter", "This Cash Counter Crostide script created by .gg/cdhc!", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Crostide/cdhc/main/gui"))()
+end)
+
+PlayerSection:NewButton("money counter", "money-counter only (draggable, but not hide-able) by: .gg/iku!", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/OG5/IkuScripts/main/DH/MoneyCounter', true))()
+end)
+
+PlayerSection:NewButton("money counter halloweens", "money counter Script halloween gui script created on server .gg/halloweens!", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/halloweevn/SpookyControl/main/Source%20%3AD/CashCounter'))()
+end)
