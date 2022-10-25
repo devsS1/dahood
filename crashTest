@@ -50,7 +50,6 @@ baseplate.Name = "Baseplate"
 baseplate.Position = Vector3.new(7000, 7000, 7000)
 wait(.3)
 
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(7000, 7015, 7000)
 game:GetService("CoreGui").PurchasePrompt.Enabled = false
 
 
