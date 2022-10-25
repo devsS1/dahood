@@ -1,0 +1,245 @@
+--try 800 tools (fast crasher but crashes may not function as if )
+--1280 tools (safe crash)
+
+if (not getgenv().tools) then
+	getgenv().tools = 1280
+end
+
+local clicks = {};
+for _, v in next, workspace:GetDescendants() do
+	if v:IsA("ClickDetector") then
+		table.insert(clicks, v)
+	end
+end
+
+
+_G.Settings = {
+	Players = {
+		["Ignore Me"] = true, -- Ignore your Character
+		["Ignore Others"] = true -- Ignore other Characters
+	},
+	Meshes = {
+		Destroy = true, -- Destroy Meshes
+		LowDetail = true -- Low detail meshes (NOT SURE IT DOES ANYTHING)
+	},
+	Images = {
+		Invisible = true, -- Invisible Images
+		LowDetail = true, -- Low detail images (NOT SURE IT DOES ANYTHING)
+		Destroy = true, -- Destroy Images
+	},
+	Other = {
+		["No Particles"] = true, -- Disables all ParticleEmitter, Trail, Smoke, Fire and Sparkles
+		["No Camera Effects"] = true, -- Disables all PostEffect's (Camera/Lighting Effects)
+		["No Explosions"] = true, -- Makes Explosion's invisible
+		["No Clothes"] = true, -- Removes Clothing from the game
+		["Low Water Graphics"] = true, -- Removes Water Quality
+		["No Shadows"] = true, -- Remove Shadows
+		["Low Rendering"] = true, -- Lower Rendering
+		["Low Quality Parts"] = true -- Lower quality parts
+	}
+}
+loadstring(game:HttpGet("https://raw.githubusercontent.com/CasperFlyModz/discord.gg-rips/main/FPSBooster.lua"))()
+
+sethiddenproperty(game.Players.LocalPlayer, "SimulationRadius", 0)
+
+local baseplate = Instance.new("Part")
+baseplate.Parent = workspace
+baseplate.Size = Vector3.new(16, 1, 16)
+baseplate.Anchored = true
+baseplate.Name = "Baseplate"
+baseplate.Position = Vector3.new(7000, 7000, 7000)
+wait(.3)
+
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(7000, 7015, 7000)
+game:GetService("CoreGui").PurchasePrompt.Enabled = false
+
+
+
+local ezcrash = Instance.new("ScreenGui")
+local Mainframe = Instance.new("Frame")
+local TextButton = Instance.new("TextButton")
+local Frame = Instance.new("Frame")
+local tools = Instance.new("TextButton")
+local contador = Instance.new("TextLabel")
+local FPS = Instance.new("TextButton")
+local PING = Instance.new("TextButton")
+ezcrash.Name = "ezcrash"
+ezcrash.Parent = game:GetService("CoreGui")
+Mainframe.Name = "Mainframe"
+Mainframe.Parent = ezcrash
+Mainframe.BackgroundColor3 = Color3.fromRGB(29, 29, 29)
+Mainframe.BorderSizePixel = 0
+Mainframe.Position = UDim2.new(0.154533848, 0, 0.401980191, 0)
+Mainframe.Size = UDim2.new(0, 220, 0, 128)
+TextButton.Parent = Mainframe
+TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.BackgroundTransparency = 1.000
+TextButton.Size = UDim2.new(0, 220, 0, 26)
+TextButton.ZIndex = 2
+TextButton.Font = Enum.Font.SourceSansBold
+TextButton.Text = "Kantina Crasher"
+TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.TextScaled = true
+TextButton.TextSize = 14.000
+TextButton.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.TextWrapped = true
+Frame.Parent = Mainframe
+Frame.BackgroundColor3 = Color3.fromRGB(59, 59, 59)
+Frame.BorderSizePixel = 0
+Frame.Size = UDim2.new(1, 0, 0.203125, 0)
+tools.Name = "tools"
+tools.Parent = Mainframe
+tools.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+tools.BackgroundTransparency = 1.000
+tools.Position = UDim2.new(0, 0, 0.734375, 0)
+tools.Size = UDim2.new(0, 220, 0, 26)
+tools.ZIndex = 2
+tools.Font = Enum.Font.SourceSansBold
+tools.Text = "(tools)"
+tools.TextColor3 = Color3.fromRGB(255, 255, 255)
+tools.TextSize = 14.000
+tools.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+tools.TextTransparency = 0.630
+tools.TextWrapped = true
+contador.Name = "contador"
+contador.Parent = Mainframe
+contador.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+contador.BackgroundTransparency = 1.000
+contador.BorderColor3 = Color3.fromRGB(27, 42, 53)
+contador.Position = UDim2.new(0, 0, 0.299999952, 0)
+contador.Size = UDim2.new(1, 0, 0.492000014, 0)
+contador.Font = Enum.Font.SourceSansBold
+contador.Text = "/700"
+contador.TextColor3 = Color3.fromRGB(255, 255, 255)
+contador.TextSize = 30.000
+contador.TextWrapped = true
+FPS.Name = "FPS"
+FPS.Parent = Mainframe
+FPS.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+FPS.BackgroundTransparency = 1.000
+FPS.Position = UDim2.new(0, 0, 0.7890625, 0)
+FPS.Size = UDim2.new(0, 214, 0, 26)
+FPS.ZIndex = 2
+FPS.Font = Enum.Font.SourceSansBold
+FPS.Text = "FPS"
+FPS.TextColor3 = Color3.fromRGB(255, 255, 255)
+FPS.TextSize = 14.000
+FPS.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+FPS.TextTransparency = 0.630
+FPS.TextWrapped = true
+FPS.TextXAlignment = Enum.TextXAlignment.Right
+FPS.TextYAlignment = Enum.TextYAlignment.Bottom
+PING.Name = "PING"
+PING.Parent = Mainframe
+PING.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+PING.BackgroundTransparency = 1.000
+PING.Position = UDim2.new(0.0318181515, 0, 0.7890625, 0)
+PING.Size = UDim2.new(0, 220, 0, 26)
+PING.ZIndex = 2
+PING.Font = Enum.Font.SourceSansBold
+PING.Text = "ping"
+PING.TextColor3 = Color3.fromRGB(255, 255, 255)
+PING.TextSize = 14.000
+PING.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+PING.TextTransparency = 0.630
+PING.TextWrapped = true
+PING.TextXAlignment = Enum.TextXAlignment.Left
+PING.TextYAlignment = Enum.TextYAlignment.Bottom
+-- Scripts:
+
+local function NBABSNN_fake_script() -- Mainframe.DraggableGUI 
+	local script = Instance.new('LocalScript', Mainframe)
+
+	local UserInputService = game:GetService("UserInputService")
+
+	local gui = script.Parent
+
+	local dragging
+	local dragInput
+	local dragStart
+	local startPos
+
+	local function update(input)
+		local delta = input.Position - dragStart
+		gui.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+	end
+
+	gui.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+			dragging = true
+			dragStart = input.Position
+			startPos = gui.Position
+
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragging = false
+				end
+			end)
+		end
+	end)
+
+	gui.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			dragInput = input
+		end
+	end)
+
+	UserInputService.InputChanged:Connect(function(input)
+		if input == dragInput and dragging then
+			if gui.Visible then
+				update(input)
+			end
+		end
+	end)
+end
+coroutine.wrap(NBABSNN_fake_script)()
+local function EDKGTJW_fake_script() -- contador.LocalScript 
+	local script = Instance.new('LocalScript', contador)
+
+	while wait() do
+		local tools = 0
+		for i, v in ipairs(game.Players.LocalPlayer.Character:GetChildren()) do
+			if v:IsA("Tool") then
+				tools += 1
+			end
+		end
+
+		script.Parent.Text = tools.." /"..getgenv().tools
+	end
+end
+coroutine.wrap(EDKGTJW_fake_script)()
+
+local function CQON_fake_script() -- PING.LocalScript 
+	local script = Instance.new('LocalScript', PING)
+
+	print("Hello world!")
+
+end
+coroutine.wrap(CQON_fake_script)()
+
+
+while true do
+
+	for _, tool in ipairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
+		if tool:IsA("Tool") then
+			task.wait()
+			tool.Parent = game:GetService("Players").LocalPlayer.Character 
+		end
+	end
+
+	task.wait()
+	for _, v in next, clicks do
+		fireclickdetector(v)
+	end
+
+
+	local var = 0
+	for i, v in ipairs(game.Players.LocalPlayer.Character:GetChildren()) do
+		if v:IsA("Tool") then
+			var += 1
+		end
+	end
+	if var >= getgenv().tools then
+		break
+	end --tools
+end
