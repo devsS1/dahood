@@ -42,12 +42,14 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/CasperFlyModz/discord
 
 sethiddenproperty(game.Players.LocalPlayer, "SimulationRadius", 0)
 
-local baseplate = Instance.new("Part")
-baseplate.Parent = workspace
-baseplate.Size = Vector3.new(16, 1, 16)
-baseplate.Anchored = true
-baseplate.Name = "Baseplate"
-baseplate.Position = Vector3.new(7000, 7000, 7000)
+while true do wait()
+    local baseplate = Instance.new("Part")
+    baseplate.Parent = workspace
+    baseplate.Size = Vector3.new(16, 1, 16)
+    baseplate.Anchored = true
+    baseplate.Name = "Baseplate"
+    baseplate.Position = Vector3.new(7000, 7000, 7000)
+end
 wait(.3)
 
 game:GetService("CoreGui").PurchasePrompt.Enabled = false
